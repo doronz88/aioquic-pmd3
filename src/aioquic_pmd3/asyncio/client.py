@@ -28,17 +28,18 @@ async def connect(
     Connect to a QUIC server at the given `host` and `port`.
 
     :meth:`connect()` returns an awaitable. Awaiting it yields a
-    :class:`~aioquic.asyncio.QuicConnectionProtocol` which can be used to
+    :class:`~aioquic_pmd3.asyncio.QuicConnectionProtocol` which can be used to
     create streams.
 
     :func:`connect` also accepts the following optional arguments:
 
-    * ``configuration`` is a :class:`~aioquic.quic.configuration.QuicConfiguration`
+    * ``configuration`` is a :class:`~aioquic_pmd3.quic.configuration.QuicConfiguration`
       configuration object.
     * ``create_protocol`` allows customizing the :class:`~asyncio.Protocol` that
       manages the connection. It should be a callable or class accepting the same
-      arguments as :class:`~aioquic.asyncio.QuicConnectionProtocol` and returning
-      an instance of :class:`~aioquic.asyncio.QuicConnectionProtocol` or a subclass.
+      arguments as :class:`~aioquic_pmd3.asyncio.QuicConnectionProtocol` and returning
+      an instance of :class:`~aioquic_pmd3.asyncio.QuicConnectionProtocol` or a
+      subclass.
     * ``session_ticket_handler`` is a callback which is invoked by the TLS
       engine when a new session ticket is received.
     * ``stream_handler`` is a callback which is invoked whenever a stream is

@@ -24,17 +24,17 @@ class bdist_wheel_abi3(bdist_wheel):
 setuptools.setup(
     ext_modules=[
         setuptools.Extension(
-            "aioquic._buffer",
+            "aioquic_pmd3._buffer",
             extra_compile_args=extra_compile_args,
-            sources=["src/aioquic/_buffer.c"],
+            sources=["src/aioquic_pmd3/_buffer.c"],
             define_macros=[("Py_LIMITED_API", "0x03080000")],
             py_limited_api=True,
         ),
         setuptools.Extension(
-            "aioquic._crypto",
+            "aioquic_pmd3._crypto",
             extra_compile_args=extra_compile_args,
             libraries=libraries,
-            sources=["src/aioquic/_crypto.c"],
+            sources=["src/aioquic_pmd3/_crypto.c"],
             define_macros=[("Py_LIMITED_API", "0x03080000")],
             py_limited_api=True,
         ),

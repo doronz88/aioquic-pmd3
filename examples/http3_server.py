@@ -7,24 +7,28 @@ from collections import deque
 from email.utils import formatdate
 from typing import Callable, Deque, Dict, List, Optional, Union, cast
 
-import aioquic
+import aioquic_pmd3
 import wsproto
 import wsproto.events
-from aioquic.asyncio import QuicConnectionProtocol, serve
-from aioquic.h0.connection import H0_ALPN, H0Connection
-from aioquic.h3.connection import H3_ALPN, H3Connection
-from aioquic.h3.events import (
+from aioquic_pmd3.asyncio import QuicConnectionProtocol, serve
+from aioquic_pmd3.h0.connection import H0_ALPN, H0Connection
+from aioquic_pmd3.h3.connection import H3_ALPN, H3Connection
+from aioquic_pmd3.h3.events import (
     DatagramReceived,
     DataReceived,
     H3Event,
     HeadersReceived,
     WebTransportStreamDataReceived,
 )
-from aioquic.h3.exceptions import NoAvailablePushIDError
-from aioquic.quic.configuration import QuicConfiguration
-from aioquic.quic.events import DatagramFrameReceived, ProtocolNegotiated, QuicEvent
-from aioquic.quic.logger import QuicFileLogger
-from aioquic.tls import SessionTicket
+from aioquic_pmd3.h3.exceptions import NoAvailablePushIDError
+from aioquic_pmd3.quic.configuration import QuicConfiguration
+from aioquic_pmd3.quic.events import (
+    DatagramFrameReceived,
+    ProtocolNegotiated,
+    QuicEvent,
+)
+from aioquic_pmd3.quic.logger import QuicFileLogger
+from aioquic_pmd3.tls import SessionTicket
 
 try:
     import uvloop
@@ -34,7 +38,7 @@ except ImportError:
 AsgiApplication = Callable
 HttpConnection = Union[H0Connection, H3Connection]
 
-SERVER_NAME = "aioquic/" + aioquic.__version__
+SERVER_NAME = "aioquic_pmd3/" + aioquic_pmd3.__version__
 
 
 class HttpRequestHandler:

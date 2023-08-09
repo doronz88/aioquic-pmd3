@@ -4,11 +4,11 @@ import logging
 import ssl
 from typing import Optional, cast
 
-from aioquic.asyncio.client import connect
-from aioquic.asyncio.protocol import QuicConnectionProtocol
-from aioquic.quic.configuration import QuicConfiguration
-from aioquic.quic.events import DatagramFrameReceived, QuicEvent
-from aioquic.quic.logger import QuicFileLogger
+from aioquic_pmd3.asyncio.client import connect
+from aioquic_pmd3.asyncio.protocol import QuicConnectionProtocol
+from aioquic_pmd3.quic.configuration import QuicConfiguration
+from aioquic_pmd3.quic.events import DatagramFrameReceived, QuicEvent
+from aioquic_pmd3.quic.logger import QuicFileLogger
 
 logger = logging.getLogger("client")
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# aioquic documentation build configuration file, created by
+# aioquic_pmd3 documentation build configuration file, created by
 # sphinx-quickstart on Thu Feb  8 17:22:14 2018.
 #
 # This file is execfile()d with the current directory set to its
@@ -54,7 +54,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'aioquic'
+project = 'aioquic_pmd3'
 copyright = u'2019, Jeremy Lainé'
 author = u'Jeremy Lainé'
 
@@ -101,8 +101,8 @@ html_theme_options = {
     'description': 'A library for QUIC in Python.',
     'github_button': True,
     'github_user': 'aiortc',
-    'github_repo': 'aioquic',
-    'logo': 'aioquic.svg',
+    'github_repo': 'aioquic_pmd3',
+    'logo': 'aioquic_pmd3.svg',
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -155,7 +155,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'aioquic.tex', 'aioquic Documentation',
+    (master_doc, 'aioquic_pmd3.tex', 'aioquic_pmd3 Documentation',
      author, 'manual'),
 ]
 
@@ -165,7 +165,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'aioquic', 'aioquic Documentation',
+    (master_doc, 'aioquic_pmd3', 'aioquic_pmd3 Documentation',
      [author], 1)
 ]
 
@@ -176,7 +176,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'aioquic', 'aioquic Documentation',
-     author, 'aioquic', 'One line description of project.',
+    (master_doc, 'aioquic_pmd3', 'aioquic_pmd3 Documentation',
+     author, 'aioquic_pmd3', 'One line description of project.',
      'Miscellaneous'),
 ]

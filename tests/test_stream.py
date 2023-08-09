@@ -1,9 +1,9 @@
 from unittest import TestCase
 
-from aioquic.quic.events import StreamDataReceived, StreamReset
-from aioquic.quic.packet import QuicErrorCode, QuicStreamFrame
-from aioquic.quic.packet_builder import QuicDeliveryState
-from aioquic.quic.stream import FinalSizeError, QuicStream
+from aioquic_pmd3.quic.events import StreamDataReceived, StreamReset
+from aioquic_pmd3.quic.packet import QuicErrorCode, QuicStreamFrame
+from aioquic_pmd3.quic.packet_builder import QuicDeliveryState
+from aioquic_pmd3.quic.stream import FinalSizeError, QuicStream
 
 
 class QuicStreamTest(TestCase):

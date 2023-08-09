@@ -4,11 +4,11 @@ import logging
 import struct
 from typing import Dict, Optional
 
-from aioquic.asyncio import QuicConnectionProtocol, serve
-from aioquic.quic.configuration import QuicConfiguration
-from aioquic.quic.events import QuicEvent, StreamDataReceived
-from aioquic.quic.logger import QuicFileLogger
-from aioquic.tls import SessionTicket
+from aioquic_pmd3.asyncio import QuicConnectionProtocol, serve
+from aioquic_pmd3.quic.configuration import QuicConfiguration
+from aioquic_pmd3.quic.events import QuicEvent, StreamDataReceived
+from aioquic_pmd3.quic.logger import QuicFileLogger
+from aioquic_pmd3.tls import SessionTicket
 from dnslib.dns import DNSRecord
 
 
