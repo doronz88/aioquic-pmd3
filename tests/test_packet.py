@@ -1,9 +1,9 @@
 import binascii
 from unittest import TestCase
 
-from aioquic.buffer import Buffer, BufferReadError
-from aioquic.quic import packet
-from aioquic.quic.packet import (
+from aioquic_pmd3.buffer import Buffer, BufferReadError
+from aioquic_pmd3.quic import packet
+from aioquic_pmd3.quic.packet import (
     PACKET_TYPE_INITIAL,
     PACKET_TYPE_RETRY,
     QuicPreferredAddress,

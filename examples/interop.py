@@ -14,12 +14,12 @@ from enum import Flag
 from typing import Optional, cast
 
 import httpx
-from aioquic.asyncio import connect
-from aioquic.h0.connection import H0_ALPN
-from aioquic.h3.connection import H3_ALPN, H3Connection
-from aioquic.h3.events import DataReceived, HeadersReceived, PushPromiseReceived
-from aioquic.quic.configuration import QuicConfiguration
-from aioquic.quic.logger import QuicFileLogger, QuicLogger
+from aioquic_pmd3.asyncio import connect
+from aioquic_pmd3.h0.connection import H0_ALPN
+from aioquic_pmd3.h3.connection import H3_ALPN, H3Connection
+from aioquic_pmd3.h3.events import DataReceived, HeadersReceived, PushPromiseReceived
+from aioquic_pmd3.quic.configuration import QuicConfiguration
+from aioquic_pmd3.quic.logger import QuicFileLogger, QuicLogger
 from http3_client import HttpClient
 
 
@@ -83,7 +83,11 @@ class Server:
 SERVERS = [
     Server("akamaiquic", "ietf.akaquic.com", port=443, verify_mode=ssl.CERT_NONE),
     Server(
-        "aioquic", "quic.aiortc.org", port=443, push_path="/", structured_logging=True
+        "aioquic_pmd3",
+        "quic.aiortc.org",
+        port=443,
+        push_path="/",
+        structured_logging=True,
     ),
     Server("ats", "quic.ogre.com"),
     Server("f5", "f5quic.com", retry_port=4433, throughput_path=None),

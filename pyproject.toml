@@ -3,13 +3,13 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "aioquic"
+name = "aioquic-pmd3"
 description = "An implementation of QUIC and HTTP/3"
 readme = "README.rst"
 requires-python = ">=3.8"
 license = { text = "BSD-3-Clause" }
 authors = [
-    { name = "Jeremy Lainé", email = "jeremy.laine@m4x.org" },
+    { name = "doronz88", email = "doron88@gmail.com" },
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -39,11 +39,11 @@ dev = [
 ]
 
 [project.urls]
-homepage = "https://github.com/aiortc/aioquic"
+homepage = "https://github.com/doronz88/aioquic-pmd3"
 documentation = "https://aioquic.readthedocs.io/"
 
 [tool.coverage.run]
-source = ["aioquic"]
+source = ["aioquic_pmd3"]
 
 [tool.mypy]
 disallow_untyped_calls = true
@@ -62,4 +62,4 @@ select = [
 ]
 
 [tool.setuptools.dynamic]
-version = {attr = "aioquic.__version__"}
+version = {attr = "aioquic_pmd3.__version__"}

@@ -3,20 +3,6 @@ name: tests
 on: [push, pull_request]
 
 jobs:
-  docs:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 3.8
-      - name: Build documentation
-        env:
-          READTHEDOCS: "True"
-        run: |
-          pip install . -r requirements/doc.txt
-          make -C docs html SPHINXOPTS=-W
-
   lint:
     runs-on: ubuntu-latest
     steps:

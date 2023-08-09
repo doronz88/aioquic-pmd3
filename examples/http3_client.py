@@ -9,23 +9,23 @@ from collections import deque
 from typing import BinaryIO, Callable, Deque, Dict, List, Optional, Union, cast
 from urllib.parse import urlparse
 
-import aioquic
+import aioquic_pmd3
 import wsproto
 import wsproto.events
-from aioquic.asyncio.client import connect
-from aioquic.asyncio.protocol import QuicConnectionProtocol
-from aioquic.h0.connection import H0_ALPN, H0Connection
-from aioquic.h3.connection import H3_ALPN, ErrorCode, H3Connection
-from aioquic.h3.events import (
+from aioquic_pmd3.asyncio.client import connect
+from aioquic_pmd3.asyncio.protocol import QuicConnectionProtocol
+from aioquic_pmd3.h0.connection import H0_ALPN, H0Connection
+from aioquic_pmd3.h3.connection import H3_ALPN, ErrorCode, H3Connection
+from aioquic_pmd3.h3.events import (
     DataReceived,
     H3Event,
     HeadersReceived,
     PushPromiseReceived,
 )
-from aioquic.quic.configuration import QuicConfiguration
-from aioquic.quic.events import QuicEvent
-from aioquic.quic.logger import QuicFileLogger
-from aioquic.tls import CipherSuite, SessionTicket
+from aioquic_pmd3.quic.configuration import QuicConfiguration
+from aioquic_pmd3.quic.events import QuicEvent
+from aioquic_pmd3.quic.logger import QuicFileLogger
+from aioquic_pmd3.tls import CipherSuite, SessionTicket
 
 try:
     import uvloop
@@ -36,7 +36,7 @@ logger = logging.getLogger("client")
 
 HttpConnection = Union[H0Connection, H3Connection]
 
-USER_AGENT = "aioquic/" + aioquic.__version__
+USER_AGENT = "aioquic_pmd3/" + aioquic_pmd3.__version__
 
 
 class URL:

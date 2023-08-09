@@ -1,13 +1,13 @@
 from unittest import TestCase
 
-from aioquic.h3.connection import H3_ALPN, ErrorCode, H3Connection
-from aioquic.h3.events import (
+from aioquic_pmd3.h3.connection import H3_ALPN, ErrorCode, H3Connection
+from aioquic_pmd3.h3.events import (
     DatagramReceived,
     HeadersReceived,
     WebTransportStreamDataReceived,
 )
-from aioquic.quic.configuration import QuicConfiguration
-from aioquic.quic.events import DatagramFrameReceived
+from aioquic_pmd3.quic.configuration import QuicConfiguration
+from aioquic_pmd3.quic.events import DatagramFrameReceived
 
 from .test_h3 import (
     FakeQuicConnection,
